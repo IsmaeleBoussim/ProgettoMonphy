@@ -8,9 +8,7 @@
   <body>
     <p>
 <?php
-
 echo 'Ciao ' . $_POST['nome'] . ' ' . $_POST['cognome'] . ', grazie per esserti registrato.';
-
 ?>
     </p>
   </body>
