@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Monphy</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Registrazione</h1>
+    <p>Se ti sei gia registrato <a href="Login.html">clicca qui</a></p>
+    <form method="post" action='http://localhost:8080/esempio.php'>
+      <fieldset>
+        <label for="nome">Nome: <input id="nome" name="nome" type="text" required /></label>
+        <label for="cognome">Cognome: <input id="cognome" name="cognome" type="text" required /></label>
+        <label for="email">Email: <input id="email" name="email" type="email" required /></label>
+        <label for="password">Nuova Password: <input id="password" name="password" type="password" pattern="[a-z0-9]{8,100}" required /></label>
+        <label for="nascita">Data di nascita (GG/MM/AAAA): <input id="nascita" type="text" name="nascita"/></label>
+      </fieldset>
+      <fieldset>
+        <label for="account-personale"><input id="account-personale" type="radio" name="account" class="inline" /> Account Personale</label>
+        <label for="account-aziendale"><input id="business-account" type="radio" name="account" class="inline" /> Account Aziendale</label>
+        <label for="terms-and-conditions" name="terms-and-conditions">
+          <input id="termini" type="checkbox" required name="termini" class="inline" /> Io accetto <a href="https://www.monphy.it/" target="_blank"> i termini e le condizioni</a>
+        </label>
+      </fieldset>
+      <fieldset>
+        <label for="referenze">Come hai conosciuto questa pagina?
+          <select id="referenze" name="referenze">
+            <option value="">seleziona</option>
+            <option value="instagram">Instagram</option>
+            <option value="facebook">Facebook</option>
+            <option value="youtube">YouTube</option>
+            <option value="altro">Altro</option>
+          </select>
+        </label>
+        <label for="bio">Perchè ti stai registrando?
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Mi sto registrando perchè..."></textarea>
+        </label>
+      </fieldset>
+      <input type="submit" value="Invia" />
+    </form>
+  </body>
+  </html>
